@@ -1,155 +1,73 @@
-&lt;!DOCTYPE html&gt;
-&lt;html lang="ru"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;TenLux — разработка и цифровые продукты&lt;/title&gt;
-    &lt;meta name="description" content="TenLux — независимая студия разработки. Код, который работает. Dark outside. Light inside."&gt;
-    &lt;style&gt;
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            background: #0a0a0a;
-            color: #e8e8e8;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-        .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+<!DOCTYPE html>
 
-        /* HERO */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 80px 0;
-        }
-        .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            margin-bottom: 24px;
-            color: #ffffff;
-        }
-        .hero .tagline {
-            font-size: clamp(1rem, 3vw, 1.25rem);
-            color: #888;
-            margin-bottom: 12px;
-        }
-        .hero .sub {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 48px;
-        }
-        .hero .cta {
-            display: inline-flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            border: 1px solid #333;
-            border-radius: 6px;
-            color: #e8e8e8;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: all 0.2s ease;
-        }
-        .btn:hover { border-color: #666; background: #141414; }
-        .btn-primary { background: #ffffff; color: #0a0a0a; border-color: #ffffff; }
-        .btn-primary:hover { background: #ccc; border-color: #ccc; }
-
-        /* SECTIONS */
-        section { padding: 80px 0; border-top: 1px solid #1a1a1a; }
-        section h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 24px;
-            color: #ffffff;
-            letter-spacing: 0.05em;
-        }
-        section p { color: #999; margin-bottom: 16px; }
-
-        /* PROJECTS */
-        .project {
-            display: block;
-            padding: 24px;
-            border: 1px solid #1f1f1f;
-            border-radius: 8px;
-            margin-bottom: 16px;
-            text-decoration: none;
-            color: inherit;
-            transition: border-color 0.2s ease, background 0.2s ease;
-        }
-        .project:hover { border-color: #444; background: #0f0f0f; }
-        .project h3 { color: #ffffff; font-size: 1.1rem; margin-bottom: 8px; }
-        .project p { color: #888; font-size: 0.95rem; margin: 0; }
-        .project .meta { color: #555; font-size: 0.85rem; margin-top: 12px; }
-
-        /* CONTACT */
-        .contact-list { list-style: none; }
-        .contact-list li { margin-bottom: 12px; }
-        .contact-list a {
-            color: #e8e8e8;
-            text-decoration: none;
-            border-bottom: 1px solid #333;
-            padding-bottom: 2px;
-            transition: border-color 0.2s ease;
-        }
-        .contact-list a:hover { border-color: #888; }
-        .contact-list .label { color: #555; display: inline-block; min-width: 100px; }
-
-        /* FOOTER */
-        footer {
-            padding: 40px 0;
-            border-top: 1px solid #1a1a1a;
-            color: #444;
-            font-size: 0.85rem;
-            text-align: center;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-    &lt;div class="hero container"&gt;
-        &lt;h1&gt;TENLUX&lt;/h1&gt;
-        &lt;p class="tagline"&gt;Dark outside. Light inside.&lt;/p&gt;
-        &lt;p class="sub"&gt;Независимая студия разработки цифровых продуктов.&lt;/p&gt;
-        &lt;div class="cta"&gt;
-            &lt;a href="#projects" class="btn btn-primary"&gt;Проекты&lt;/a&gt;
-            &lt;a href="#contact" class="btn"&gt;Связаться&lt;/a&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;section class="container"&gt;
-        &lt;h2&gt;О студии&lt;/h2&gt;
-        &lt;p&gt;TenLux — независимая студия разработки. Мы создаём цифровые продукты: от небольших утилит и ботов до полноценных веб-приложений.&lt;/p&gt;
-        &lt;p&gt;Работаем на Python, JavaScript, Whisper, CUDA. Любим сложные технические задачи и чистый код. Под маской тьмы — свет работающих решений.&lt;/p&gt;
-    &lt;/section&gt;
-
-    &lt;section class="container" id="projects"&gt;
-        &lt;h2&gt;Проекты&lt;/h2&gt;
-        &lt;a href="https://github.com/TenLux-dev/Stream-Subs" class="project"&gt;
-            &lt;h3&gt;Stream-Subs&lt;/h3&gt;
-            &lt;p&gt;Локальные субтитры RU→EN в реальном времени для стримов. Whisper + CUDA, работает без облака.&lt;/p&gt;
-            &lt;div class="meta"&gt;Python · Whisper · FastAPI · GitHub →&lt;/div&gt;
-        &lt;/a&gt;
-    &lt;/section&gt;
-
-    &lt;section class="container" id="contact"&gt;
-        &lt;h2&gt;Контакты&lt;/h2&gt;
-        &lt;ul class="contact-list"&gt;
-            &lt;li&gt;&lt;span class="label"&gt;Почта:&lt;/span&gt;&lt;a href="mailto:hello@tenlux.tech"&gt;hello@tenlux.tech&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;span class="label"&gt;Telegram:&lt;/span&gt;&lt;a href="https://t.me/tenlux_dev"&gt;@tenlux_dev&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;span class="label"&gt;GitHub:&lt;/span&gt;&lt;a href="https://github.com/TenLux-dev"&gt;TenLux-dev&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/section&gt;
-
-    &lt;footer&gt;
-        &lt;p&gt;© 2026 TenLux. Dark outside. Light inside.&lt;/p&gt;
-    &lt;/footer&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TenLux — разработка и цифровые продукты</title>
+<meta name="description" content="TenLux — независимая студия разработки. Код, который работает. Dark outside. Light inside.">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0a0a0a; color: #e8e8e8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 80px 0; }
+.hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 700; letter-spacing: 0.15em; margin-bottom: 24px; color: #ffffff; }
+.hero .tagline { font-size: clamp(1rem, 3vw, 1.25rem); color: #888; margin-bottom: 12px; }
+.hero .sub { font-size: 1rem; color: #555; margin-bottom: 48px; }
+.hero .cta { display: inline-flex; gap: 16px; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 12px 24px; border: 1px solid #333; border-radius: 6px; color: #e8e8e8; text-decoration: none; font-size: 0.95rem; transition: all 0.2s ease; }
+.btn:hover { border-color: #666; background: #141414; }
+.btn-primary { background: #ffffff; color: #0a0a0a; border-color: #ffffff; }
+.btn-primary:hover { background: #ccc; border-color: #ccc; }
+section { padding: 80px 0; border-top: 1px solid #1a1a1a; }
+section h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 24px; color: #ffffff; letter-spacing: 0.05em; }
+section p { color: #999; margin-bottom: 16px; }
+.project { display: block; padding: 24px; border: 1px solid #1f1f1f; border-radius: 8px; margin-bottom: 16px; text-decoration: none; color: inherit; transition: border-color 0.2s ease, background 0.2s ease; }
+.project:hover { border-color: #444; background: #0f0f0f; }
+.project h3 { color: #ffffff; font-size: 1.1rem; margin-bottom: 8px; }
+.project p { color: #888; font-size: 0.95rem; margin: 0; }
+.project .meta { color: #555; font-size: 0.85rem; margin-top: 12px; }
+.contact-list { list-style: none; }
+.contact-list li { margin-bottom: 12px; }
+.contact-list a { color: #e8e8e8; text-decoration: none; border-bottom: 1px solid #333; padding-bottom: 2px; transition: border-color 0.2s ease; }
+.contact-list a:hover { border-color: #888; }
+.contact-list .label { color: #555; display: inline-block; min-width: 100px; }
+footer { padding: 40px 0; border-top: 1px solid #1a1a1a; color: #444; font-size: 0.85rem; text-align: center; }
+</style>
+</head>
+<body>
+<div class="hero container">
+<h1>TENLUX</h1>
+<p class="tagline">Dark outside. Light inside.</p>
+<p class="sub">Независимая студия разработки цифровых продуктов.</p>
+<div class="cta">
+<a href="#projects" class="btn btn-primary">Проекты</a>
+<a href="#contact" class="btn">Связаться</a>
+</div>
+</div>
+<section class="container">
+<h2>О студии</h2>
+<p>TenLux — независимая студия разработки. Мы создаём цифровые продукты: от небольших утилит и ботов до полноценных веб-приложений.</p>
+<p>Работаем на Python, JavaScript, Whisper, CUDA. Любим сложные технические задачи и чистый код. Под маской тьмы — свет работающих решений.</p>
+</section>
+<section class="container" id="projects">
+<h2>Проекты</h2>
+<a href="https://github.com/TenLux-dev/Stream-Subs" class="project">
+<h3>Stream-Subs</h3>
+<p>Локальные субтитры RU→EN в реальном времени для стримов. Whisper + CUDA, работает без облака.</p>
+<div class="meta">Python · Whisper · FastAPI · GitHub →</div>
+</a>
+</section>
+<section class="container" id="contact">
+<h2>Контакты</h2>
+<ul class="contact-list">
+<li><span class="label">Почта:</span><a href="mailto:hello@tenlux.tech">hello@tenlux.tech</a></li>
+<li><span class="label">Telegram:</span><a href="https://t.me/tenlux_dev">@tenlux_dev</a></li>
+<li><span class="label">GitHub:</span><a href="https://github.com/TenLux-dev">TenLux-dev</a></li>
+</ul>
+</section>
+<footer>
+<p>© 2026 TenLux. Dark outside. Light inside.</p>
+</footer>
+</body>
+</html>
