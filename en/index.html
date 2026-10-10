@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TenLux — Software Development Studio</title>
+<meta name="description" content="TenLux — independent software development studio. Code that works. Dark outside. Light inside.">
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0a0a0a; color: #e8e8e8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 80px 0; }
+.hero h1 { font-family: 'Tektur', sans-serif; font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 700; letter-spacing: 0.15em; margin-bottom: 24px; color: #ffffff; }
+.hero .tagline { font-size: clamp(1rem, 3vw, 1.25rem); color: #888; margin-bottom: 12px; }
+.hero .sub { font-size: 1rem; color: #555; margin-bottom: 48px; }
+.hero .cta { display: inline-flex; gap: 16px; flex-wrap: wrap; }
+.btn { font-family: 'Tektur', sans-serif; font-weight: 500; display: inline-block; padding: 12px 24px; border: 1px solid #333; border-radius: 6px; color: #e8e8e8; text-decoration: none; font-size: 0.9rem; letter-spacing: 0.02em; transition: all 0.2s ease; }
+.btn:hover { border-color: #666; background: #141414; }
+.btn-primary { background: #ffffff; color: #0a0a0a; border-color: #ffffff; }
+.btn-primary:hover { background: #ccc; border-color: #ccc; }
+section { padding: 80px 0; border-top: 1px solid #1a1a1a; }
+section h2 { font-family: 'Tektur', sans-serif; font-size: 1.5rem; font-weight: 500; margin-bottom: 24px; color: #ffffff; letter-spacing: 0.08em; }
+section p { color: #999; margin-bottom: 16px; }
+.project-card, .service-card { padding: 28px; border: 1px solid #1f1f1f; border-radius: 10px; background: #0d0d0d; margin-bottom: 16px; }
+.project-card h3, .service-card h3 { font-family: 'Tektur', sans-serif; font-weight: 500; color: #fff; font-size: 1.15rem; margin-bottom: 12px; letter-spacing: 0.02em; }
+.project-desc { color: #999; margin-bottom: 20px; }
+.project-features { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.tag { display: inline-block; padding: 4px 10px; background: #141414; border: 1px solid #262626; border-radius: 4px; color: #888; font-size: 0.8rem; }
+.project-list { list-style: none; padding: 0; margin-bottom: 24px; }
+.project-list li { color: #999; padding-left: 20px; position: relative; margin-bottom: 8px; font-size: 0.95rem; }
+.project-list li::before { content: "→"; position: absolute; left: 0; color: #555; }
+.project-links { display: flex; gap: 12px; flex-wrap: wrap; }
+.app-card { padding: 28px; border: 1px dashed #2a2a2a; border-radius: 10px; background: #0d0d0d; text-align: center; }
+.app-card .app-icon { font-size: 2.5rem; margin-bottom: 12px; }
+.app-card h3 { font-family: 'Tektur', sans-serif; font-weight: 500; color: #fff; font-size: 1.15rem; margin-bottom: 8px; letter-spacing: 0.02em; }
+.app-card p { color: #888; font-size: 0.95rem; margin-bottom: 0; }
+.app-card .status { font-family: 'Tektur', sans-serif; display: inline-block; margin-top: 16px; padding: 4px 12px; background: #141414; border: 1px solid #262626; border-radius: 20px; color: #666; font-size: 0.75rem; letter-spacing: 0.05em; }
+.service-icon { font-size: 2rem; margin-bottom: 12px; }
+.service-card > p { color: #999; margin-bottom: 20px; font-size: 0.95rem; }
+.service-footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 20px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+.service-price { font-family: 'Tektur', sans-serif; font-weight: 500; color: #fff; font-size: 1rem; letter-spacing: 0.02em; }
+.services-note { text-align: center; padding: 32px 0; border-top: 1px solid #1a1a1a; margin-top: 16px; }
+.services-note p { color: #888; margin-bottom: 16px; }
+.contact-list { list-style: none; padding: 0; }
+.contact-list li { margin-bottom: 12px; }
+.contact-list a { color: #e8e8e8; text-decoration: none; border-bottom: 1px solid #333; padding-bottom: 2px; transition: border-color 0.2s ease; }
+.contact-list a:hover { border-color: #888; }
+.contact-list .label { font-family: 'Tektur', sans-serif; font-weight: 400; color: #555; display: inline-block; min-width: 100px; letter-spacing: 0.02em; }
+.contact-cta { margin-top: 32px; text-align: center; }
+.contact-cta p { color: #888; margin-bottom: 16px; }
+footer { padding: 40px 0; border-top: 1px solid #1a1a1a; color: #444; font-size: 0.85rem; text-align: center; }
+footer .slogan { font-family: 'Tektur', sans-serif; font-weight: 400; letter-spacing: 0.1em; }
+.lang-switch { position: fixed; top: 20px; right: 20px; font-family: 'Tektur', sans-serif; font-size: 0.8rem; letter-spacing: 0.1em; z-index: 10; }
+.lang-switch a { color: #666; text-decoration: none; padding: 4px 8px; transition: color 0.2s ease; }
+.lang-switch a:hover { color: #fff; }
+.lang-switch a.active { color: #fff; }
+.lang-switch span { color: #333; }
+</style>
+</head>
+<body>
+<div class="lang-switch">
+<a href="https://tenlux.tech/">RU</a>
+<span>|</span>
+<a href="https://tenlux.tech/en/" class="active">EN</a>
+</div>
+<div class="hero container">
+<h1>TENLUX</h1>
+<p class="tagline">Dark outside. Light inside.</p>
+<p class="sub">Independent software development studio.</p>
+<div class="cta">
+<a href="#services" class="btn btn-primary">Services</a>
+<a href="#projects" class="btn">Projects</a>
+</div>
+</div>
+<section class="container">
+<h2>About</h2>
+<p>TenLux is an independent software development studio. We build digital products: from small utilities and bots to full-featured web and mobile applications.</p>
+<p>We work with Python, JavaScript, Kotlin, Whisper and CUDA. We love complex technical challenges and clean code. Under the mask of darkness — the light of working solutions.</p>
+</section>
+<section class="container" id="services">
+<h2>Services</h2>
+<div class="service-card">
+<div class="service-icon">🌐</div>
+<h3>Turnkey websites</h3>
+<p>Domain, hosting, DNS, SSL, landing page. From idea to a live website on the internet.</p>
+<ul class="project-list">
+<li>Domain registration and DNS setup</li>
+<li>HTTPS, favicon, sitemap, robots.txt</li>
+<li>Responsive mobile-friendly landing page</li>
+<li>Google Search Console and Yandex.Webmaster setup</li>
+</ul>
+<div class="service-footer">
+<span class="service-price">from $60</span>
+<a href="#contact" class="btn btn-primary">Get in touch</a>
+</div>
+</div>
+<div class="service-card">
+<div class="service-icon">⚙️</div>
+<h3>Infrastructure setup</h3>
+<p>DNS, Cloudflare, corporate email on your domain, analytics, SEO basics.</p>
+<ul class="project-list">
+<li>Domain connection to Cloudflare</li>
+<li>Email on your domain (Email Routing)</li>
+<li>Yandex.Metrica, Google Analytics</li>
+<li>Search engine indexing</li>
+</ul>
+<div class="service-footer">
+<span class="service-price">from $35</span>
+<a href="#contact" class="btn btn-primary">Get in touch</a>
+</div>
+</div>
+<div class="service-card">
+<div class="service-icon">📦</div>
+<h3>Project packaging</h3>
+<p>README, documentation, landing page for your project. Turning code into a product.</p>
+<ul class="project-list">
+<li>Project description and README structure</li>
+<li>Screenshots, installation instructions</li>
+<li>Landing page to showcase your project</li>
+<li>Publication on GitHub and search</li>
+</ul>
+<div class="service-footer">
+<span class="service-price">from $60</span>
+<a href="#contact" class="btn btn-primary">Get in touch</a>
+</div>
+</div>
+<div class="service-card">
+<div class="service-icon">🤖</div>
+<h3>AI-assisted development</h3>
+<p>Rapid development of websites, bots and utilities with AI tools.</p>
+<ul class="project-list">
+<li>Telegram bots and automation</li>
+<li>Small web applications</li>
+<li>Scrapers and scripts</li>
+<li>From idea to result in days</li>
+</ul>
+<div class="service-footer">
+<span class="service-price">from $120</span>
+<a href="#contact" class="btn btn-primary">Get in touch</a>
+</div>
+</div>
+<div class="service-card">
+<div class="service-icon">📱</div>
+<h3>Android apps</h3>
+<p>Native apps in Kotlin. Utilities, service clients, networking apps.</p>
+<ul class="project-list">
+<li>Development in Kotlin</li>
+<li>APK build and testing</li>
+<li>Google Play publication or sideload</li>
+<li>Post-release support</li>
+</ul>
+<div class="service-footer">
+<span class="service-price">from $600</span>
+<a href="#contact" class="btn btn-primary">Get in touch</a>
+</div>
+</div>
+<div class="service-card">
+<div class="service-icon">💻</div>
+<h3>Desktop applications</h3>
+<p>Windows applications in Python. Installers, local data processing.</p>
+<ul class="project-list">
+<li>Development in Python</li>
+<li>Inno Setup installers</li>
+<li>Audio, video, image processing</li>
+<li>AI model integration (Whisper, CUDA)</li>
+</ul>
+<div class="service-footer">
+<span class="service-price">from $350</span>
+<a href="#contact" class="btn btn-primary">Get in touch</a>
+</div>
+</div>
+<div class="services-note">
+<p>Can't find what you need? Write to us — let's discuss.</p>
+</div>
+</section>
+<section class="container" id="projects">
+<h2>Projects</h2>
+<div class="project-card">
+<h3>🎙️ Stream-Subs</h3>
+<p class="project-desc">Real-time RU→EN subtitles for streams on Whisper + CUDA. Runs entirely on your computer — no cloud.</p>
+<div class="project-features">
+<span class="tag">Whisper medium</span>
+<span class="tag">CUDA</span>
+<span class="tag">FastAPI</span>
+<span class="tag">Python 3.11</span>
+<span class="tag">Windows</span>
+</div>
+<ul class="project-list">
+<li>0.3–0.7 second latency</li>
+<li>Web settings interface with Google Fonts</li>
+<li>Hallucination and banned-words filter</li>
+<li>Logging for stream audit</li>
+<li>One-click installer</li>
+</ul>
+<div class="project-links">
+<a href="https://github.com/TenLux-dev/Stream-Subs" class="btn">GitHub</a>
+<a href="https://github.com/TenLux-dev/Stream-Subs/releases" class="btn btn-primary">Download</a>
+</div>
+</div>
+</section>
+<section class="container" id="apps">
+<h2>Android apps</h2>
+<div class="app-card">
+<div class="app-icon">📱</div>
+<h3>In development</h3>
+<p>Android apps from TenLux are coming soon. Follow updates on Telegram.</p>
+<span class="status">Coming soon</span>
+</div>
+</section>
+<section class="container" id="contact">
+<h2>Contact</h2>
+<ul class="contact-list">
+<li><span class="label">Email:</span><a href="mailto:hello@tenlux.tech">hello@tenlux.tech</a></li>
+<li><span class="label">Telegram:</span><a href="https://t.me/tenlux_dev">@tenlux_dev</a></li>
+<li><span class="label">GitHub:</span><a href="https://github.com/TenLux-dev">TenLux-dev</a></li>
+</ul>
+<div class="contact-cta">
+<p>Describe your task — I'll reply within a day.</p>
+<a href="https://forms.yandex.ru/u/6aca29ff1f1eb55c5dc2af67" target="_blank" class="btn btn-primary" style="padding: 14px 32px;">Send a request</a>
+</div>
+</section>
+<footer>
+<p class="slogan">Dark outside. Light inside.</p>
+<p style="margin-top: 8px;">© 2026 TenLux</p>
+</footer>
+</body>
+</html>
