@@ -37,6 +37,14 @@ section p { color: #999; margin-bottom: 16px; }
 .app-card h3 { color: #fff; font-size: 1.2rem; margin-bottom: 8px; }
 .app-card p { color: #888; font-size: 0.95rem; margin-bottom: 0; }
 .app-card .status { display: inline-block; margin-top: 16px; padding: 4px 12px; background: #141414; border: 1px solid #262626; border-radius: 20px; color: #666; font-size: 0.8rem; }
+.service-card { padding: 28px; border: 1px solid #1f1f1f; border-radius: 10px; background: #0d0d0d; margin-bottom: 16px; }
+.service-icon { font-size: 2rem; margin-bottom: 12px; }
+.service-card h3 { color: #fff; font-size: 1.2rem; margin-bottom: 10px; }
+.service-card > p { color: #999; margin-bottom: 20px; font-size: 0.95rem; }
+.service-footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 20px; padding-top: 20px; border-top: 1px solid #1a1a1a; }
+.service-price { color: #fff; font-weight: 600; font-size: 1rem; }
+.services-note { text-align: center; padding: 32px 0; border-top: 1px solid #1a1a1a; margin-top: 16px; }
+.services-note p { color: #888; margin-bottom: 16px; }
 .contact-list { list-style: none; }
 .contact-list li { margin-bottom: 12px; }
 .contact-list a { color: #e8e8e8; text-decoration: none; border-bottom: 1px solid #333; padding-bottom: 2px; transition: border-color 0.2s ease; }
@@ -73,14 +81,111 @@ footer { padding: 40px 0; border-top: 1px solid #1a1a1a; color: #444; font-size:
 <p class="tagline">Dark outside. Light inside.</p>
 <p class="sub">Независимая студия разработки цифровых продуктов.</p>
 <div class="cta">
-<a href="#projects" class="btn btn-primary">Проекты</a>
-<a href="#contact" class="btn">Связаться</a>
+<a href="#services" class="btn btn-primary">Услуги</a>
+<a href="#projects" class="btn">Проекты</a>
 </div>
 </div>
 <section class="container">
 <h2>О студии</h2>
 <p>TenLux — независимая студия разработки. Мы создаём цифровые продукты: от небольших утилит и ботов до полноценных веб-приложений и мобильных приложений.</p>
 <p>Работаем на Python, JavaScript, Kotlin, Whisper, CUDA. Любим сложные технические задачи и чистый код. Под маской тьмы — свет работающих решений.</p>
+</section>
+<section class="container" id="services">
+<h2>Услуги</h2>
+<div class="service-card">
+<div class="service-icon">🌐</div>
+<h3>Запуск сайтов под ключ</h3>
+<p>Домен, хостинг, DNS, SSL, лендинг. От идеи до работающего сайта в интернете.</p>
+<ul class="project-list">
+<li>Регистрация домена и настройка DNS</li>
+<li>HTTPS, favicon, sitemap, robots.txt</li>
+<li>Адаптивный лендинг под мобильные</li>
+<li>Подключение Google Search Console и Яндекс.Вебмастера</li>
+</ul>
+<div class="service-footer">
+<span class="service-price">от 5 000 ₽</span>
+<a href="https://t.me/tenlux_dev" class="btn btn-primary">Обсудить</a>
+</div>
+</div>
+<div class="service-card">
+<div class="service-icon">⚙️</div>
+<h3>Настройка инфраструктуры</h3>
+<p>DNS, Cloudflare, корпоративная почта на домене, аналитика, SEO-база.</p>
+<ul class="project-list">
+<li>Подключение домена к Cloudflare</li>
+<li>Почта на домене (Email Routing)</li>
+<li>Яндекс.Метрика, Google Analytics</li>
+<li>Индексация в поисковых системах</li>
+</ul>
+<div class="service-footer">
+<span class="service-price">от 3 000 ₽</span>
+<a href="https://t.me/tenlux_dev" class="btn btn-primary">Обсудить</a>
+</div>
+</div>
+<div class="service-card">
+<div class="service-icon">📦</div>
+<h3>Упаковка проектов</h3>
+<p>README, документация, лендинг для вашего проекта. Превращаю код в продукт.</p>
+<ul class="project-list">
+<li>Описание проекта и структура README</li>
+<li>Скриншоты, инструкции по установке</li>
+<li>Лендинг для презентации проекта</li>
+<li>Публикация на GitHub и в поиске</li>
+</ul>
+<div class="service-footer">
+<span class="service-price">от 5 000 ₽</span>
+<a href="https://t.me/tenlux_dev" class="btn btn-primary">Обсудить</a>
+</div>
+</div>
+<div class="service-card">
+<div class="service-icon">🤖</div>
+<h3>AI-assisted разработка</h3>
+<p>Быстрая разработка сайтов, ботов и утилит с помощью AI-инструментов.</p>
+<ul class="project-list">
+<li>Telegram-боты и автоматизация</li>
+<li>Небольшие веб-приложения</li>
+<li>Парсеры и скрипты</li>
+<li>От идеи до результата за считанные дни</li>
+</ul>
+<div class="service-footer">
+<span class="service-price">от 10 000 ₽</span>
+<a href="https://t.me/tenlux_dev" class="btn btn-primary">Обсудить</a>
+</div>
+</div>
+<div class="service-card">
+<div class="service-icon">📱</div>
+<h3>Android-приложения</h3>
+<p>Нативные приложения на Kotlin. Утилиты, клиенты сервисов, сетевые приложения.</p>
+<ul class="project-list">
+<li>Разработка на Kotlin</li>
+<li>Сборка и тестирование APK</li>
+<li>Публикация в Google Play или сайдлоад</li>
+<li>Поддержка после релиза</li>
+</ul>
+<div class="service-footer">
+<span class="service-price">от 50 000 ₽</span>
+<a href="https://t.me/tenlux_dev" class="btn btn-primary">Обсудить</a>
+</div>
+</div>
+<div class="service-card">
+<div class="service-icon">💻</div>
+<h3>Десктопные приложения</h3>
+<p>Приложения под Windows на Python. Установщики, локальная обработка данных.</p>
+<ul class="project-list">
+<li>Разработка на Python</li>
+<li>Установщики Inno Setup</li>
+<li>Работа с аудио, видео, изображениями</li>
+<li>Интеграция AI-моделей (Whisper, CUDA)</li>
+</ul>
+<div class="service-footer">
+<span class="service-price">от 30 000 ₽</span>
+<a href="https://t.me/tenlux_dev" class="btn btn-primary">Обсудить</a>
+</div>
+</div>
+<div class="services-note">
+<p>Не нашли нужную услугу?</p>
+<a href="https://t.me/tenlux_dev" class="btn">Напишите — обсудим</a>
+</div>
 </section>
 <section class="container" id="projects">
 <h2>Проекты</h2>
