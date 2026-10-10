@@ -6,6 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>404 — TenLux</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -23,32 +26,30 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 .brand {
+    font-family: 'Tektur', sans-serif;
     font-size: 1.2rem;
+    font-weight: 500;
     letter-spacing: 0.3em;
     color: #444;
     margin-bottom: 40px;
 }
 .code {
+    font-family: 'Tektur', sans-serif;
     font-size: clamp(6rem, 25vw, 12rem);
     font-weight: 700;
     letter-spacing: 0.05em;
     color: #ffffff;
     line-height: 1;
-    margin-bottom: 16px;
-    position: relative;
-}
-.code::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 50% 50%, transparent 30%, #0a0a0a 70%);
-    pointer-events: none;
+    margin-bottom: 24px;
+    animation: flicker 4s infinite;
 }
 .title {
+    font-family: 'Tektur', sans-serif;
     font-size: clamp(1.2rem, 4vw, 1.6rem);
-    color: #888;
-    margin-bottom: 12px;
-    letter-spacing: 0.05em;
+    font-weight: 500;
+    color: #c8c8c8;
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
 }
 .subtitle {
     font-size: 1rem;
@@ -67,6 +68,8 @@ body {
     justify-content: center;
 }
 .btn {
+    font-family: 'Tektur', sans-serif;
+    font-weight: 500;
     display: inline-block;
     padding: 12px 24px;
     border: 1px solid #333;
@@ -74,6 +77,7 @@ body {
     color: #e8e8e8;
     text-decoration: none;
     font-size: 0.95rem;
+    letter-spacing: 0.02em;
     transition: all 0.2s ease;
 }
 .btn:hover { border-color: #666; background: #141414; }
@@ -84,13 +88,12 @@ body {
 }
 .btn-primary:hover { background: #ccc; border-color: #ccc; }
 footer {
+    font-family: 'Tektur', sans-serif;
     position: fixed;
     bottom: 24px;
     font-size: 0.8rem;
     color: #333;
-}
-.glitch {
-    animation: flicker 4s infinite;
+    letter-spacing: 0.1em;
 }
 @keyframes flicker {
     0%, 95%, 100% { opacity: 1; }
@@ -103,7 +106,7 @@ footer {
 </head>
 <body>
 <div class="brand">TENLUX</div>
-<div class="code glitch">404</div>
+<div class="code">404</div>
 <h1 class="title">Ты заблудился во тьме</h1>
 <p class="subtitle">Эта страница не существует — либо её никогда не было, либо она ушла туда, куда не стоит следовать. <em>Но свет всё ещё здесь.</em></p>
 <div class="actions">
