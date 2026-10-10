@@ -22,11 +22,15 @@ body { background: #0a0a0a; color: #e8e8e8; font-family: -apple-system, BlinkMac
 section { padding: 80px 0; border-top: 1px solid #1a1a1a; }
 section h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 24px; color: #ffffff; letter-spacing: 0.05em; }
 section p { color: #999; margin-bottom: 16px; }
-.project { display: block; padding: 24px; border: 1px solid #1f1f1f; border-radius: 8px; margin-bottom: 16px; text-decoration: none; color: inherit; transition: border-color 0.2s ease, background 0.2s ease; }
-.project:hover { border-color: #444; background: #0f0f0f; }
-.project h3 { color: #ffffff; font-size: 1.1rem; margin-bottom: 8px; }
-.project p { color: #888; font-size: 0.95rem; margin: 0; }
-.project .meta { color: #555; font-size: 0.85rem; margin-top: 12px; }
+.project-card { padding: 28px; border: 1px solid #1f1f1f; border-radius: 10px; background: #0d0d0d; }
+.project-card h3 { color: #fff; font-size: 1.3rem; margin-bottom: 12px; }
+.project-desc { color: #999; margin-bottom: 20px; }
+.project-features { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.tag { display: inline-block; padding: 4px 10px; background: #141414; border: 1px solid #262626; border-radius: 4px; color: #888; font-size: 0.8rem; }
+.project-list { list-style: none; padding: 0; margin-bottom: 24px; }
+.project-list li { color: #999; padding-left: 20px; position: relative; margin-bottom: 8px; font-size: 0.95rem; }
+.project-list li::before { content: "→"; position: absolute; left: 0; color: #555; }
+.project-links { display: flex; gap: 12px; flex-wrap: wrap; }
 .contact-list { list-style: none; }
 .contact-list li { margin-bottom: 12px; }
 .contact-list a { color: #e8e8e8; text-decoration: none; border-bottom: 1px solid #333; padding-bottom: 2px; transition: border-color 0.2s ease; }
@@ -52,11 +56,28 @@ footer { padding: 40px 0; border-top: 1px solid #1a1a1a; color: #444; font-size:
 </section>
 <section class="container" id="projects">
 <h2>Проекты</h2>
-<a href="https://github.com/TenLux-dev/Stream-Subs" class="project">
-<h3>Stream-Subs</h3>
-<p>Локальные субтитры RU→EN в реальном времени для стримов. Whisper + CUDA, работает без облака.</p>
-<div class="meta">Python · Whisper · FastAPI · GitHub →</div>
-</a>
+<div class="project-card">
+<h3>🎙️ Stream-Subs</h3>
+<p class="project-desc">Локальные субтитры RU→EN в реальном времени для стримов на Whisper + CUDA. Работает без облака — всё на вашем компьютере.</p>
+<div class="project-features">
+<span class="tag">Whisper medium</span>
+<span class="tag">CUDA</span>
+<span class="tag">FastAPI</span>
+<span class="tag">Python 3.11</span>
+<span class="tag">Windows</span>
+</div>
+<ul class="project-list">
+<li>Задержка 0.3–0.7 секунды</li>
+<li>Веб-интерфейс настроек с Google Fonts</li>
+<li>Фильтр галлюцинаций и запрещённых слов</li>
+<li>Логирование для аудита эфира</li>
+<li>Установщик в один клик</li>
+</ul>
+<div class="project-links">
+<a href="https://github.com/TenLux-dev/Stream-Subs" class="btn">GitHub</a>
+<a href="https://github.com/TenLux-dev/Stream-Subs/releases" class="btn btn-primary">Скачать</a>
+</div>
+</div>
 </section>
 <section class="container" id="contact">
 <h2>Контакты</h2>
