@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — TenLux</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    background: #0a0a0a;
+    color: #e8e8e8;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
+.brand {
+    font-size: 1.2rem;
+    letter-spacing: 0.3em;
+    color: #444;
+    margin-bottom: 40px;
+}
+.code {
+    font-size: clamp(6rem, 25vw, 12rem);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 16px;
+    position: relative;
+}
+.code::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, transparent 30%, #0a0a0a 70%);
+    pointer-events: none;
+}
+.title {
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+    color: #888;
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+}
+.subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 48px;
+    max-width: 420px;
+}
+.subtitle em {
+    color: #888;
+    font-style: normal;
+}
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #e8e8e8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+.btn:hover { border-color: #666; background: #141414; }
+.btn-primary {
+    background: #ffffff;
+    color: #0a0a0a;
+    border-color: #ffffff;
+}
+.btn-primary:hover { background: #ccc; border-color: #ccc; }
+footer {
+    position: fixed;
+    bottom: 24px;
+    font-size: 0.8rem;
+    color: #333;
+}
+.glitch {
+    animation: flicker 4s infinite;
+}
+@keyframes flicker {
+    0%, 95%, 100% { opacity: 1; }
+    96% { opacity: 0.4; }
+    97% { opacity: 1; }
+    98% { opacity: 0.6; }
+    99% { opacity: 1; }
+}
+</style>
+</head>
+<body>
+<div class="brand">TENLUX</div>
+<div class="code glitch">404</div>
+<h1 class="title">Ты заблудился во тьме</h1>
+<p class="subtitle">Эта страница не существует — либо её никогда не было, либо она ушла туда, куда не стоит следовать. <em>Но свет всё ещё здесь.</em></p>
+<div class="actions">
+<a href="https://tenlux.tech" class="btn btn-primary">Вернуться на свет</a>
+<a href="https://tenlux.tech/#contact" class="btn">Оставить заявку</a>
+</div>
+<footer>Dark outside. Light inside.</footer>
+</body>
+</html>
