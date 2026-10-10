@@ -65,6 +65,11 @@ section p { color: #999; margin-bottom: 16px; }
 .contact-cta p { color: #888; margin-bottom: 16px; }
 footer { padding: 40px 0; border-top: 1px solid #1a1a1a; color: #444; font-size: 0.85rem; text-align: center; }
 footer .slogan { font-family: 'Tektur', sans-serif; font-weight: 400; letter-spacing: 0.1em; }
+    .payment-info { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: center; align-items: center; font-size: 0.8rem; }
+.payment-label { font-family: 'Tektur', sans-serif; font-weight: 400; color: #666; letter-spacing: 0.05em; }
+.payment-method { color: #555; }
+.payment-method::before { content: "·"; margin-right: 8px; color: #333; }
+.payment-method:first-of-type::before { content: none; }
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -257,7 +262,14 @@ This site is available in English. <a href="https://tenlux.tech/en/">Switch to E
 </section>
 <footer>
 <p class="slogan">Dark outside. Light inside.</p>
-<p style="margin-top: 8px;">© 2026 TenLux</p>
+<div class="payment-info">
+<span class="payment-label">Оплата:</span>
+<span class="payment-method">Карты РФ</span>
+<span class="payment-method">СБП</span>
+<span class="payment-method">Крипта</span>
+<span class="payment-method">Для юрлиц — по счёту</span>
+</div>
+<p style="margin-top: 24px;">© 2026 TenLux</p>
 </footer>
     <script>
 (function() {
