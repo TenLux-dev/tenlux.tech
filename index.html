@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 
 <html lang="ru">
+    <style>
+.lang-switch { position: fixed; top: 20px; right: 20px; font-family: 'Tektur', sans-serif; font-size: 0.8rem; letter-spacing: 0.1em; z-index: 10; }
+.lang-switch a { color: #666; text-decoration: none; padding: 4px 8px; transition: color 0.2s ease; }
+.lang-switch a:hover { color: #fff; }
+.lang-switch a.active { color: #fff; }
+.lang-switch span { color: #333; }
+.lang-hint { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #141414; border: 1px solid #262626; border-radius: 8px; padding: 12px 20px; font-size: 0.85rem; color: #ccc; z-index: 10; display: none; max-width: 90vw; text-align: center; }
+.lang-hint a { color: #fff; text-decoration: underline; }
+.lang-hint button { background: none; border: none; color: #666; cursor: pointer; margin-left: 12px; font-size: 1.1rem; }
+    </style>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,6 +89,15 @@ footer .slogan { font-family: 'Tektur', sans-serif; font-weight: 400; letter-spa
 <noscript><div><img src="https://mc.yandex.ru/watch/113595597" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 </head>
+    <div class="lang-switch">
+<a href="https://tenlux.tech/" class="active">RU</a>
+<span>|</span>
+<a href="https://tenlux.tech/en/">EN</a>
+</div>
+<div class="lang-hint" id="langHint">
+This site is available in English. <a href="https://tenlux.tech/en/">Switch to EN</a>
+<button onclick="document.getElementById('langHint').style.display='none';localStorage.setItem('langHintDismissed','1')">×</button>
+</div>
 <body>
 <div class="hero container">
 <h1>TENLUX</h1>
@@ -240,5 +259,21 @@ footer .slogan { font-family: 'Tektur', sans-serif; font-weight: 400; letter-spa
 <p class="slogan">Dark outside. Light inside.</p>
 <p style="margin-top: 8px;">© 2026 TenLux</p>
 </footer>
+    <script>
+(function() {
+    var hint = document.getElementById('langHint');
+    var browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    var dismissed = localStorage.getItem('langHintDismissed');
+    if (!dismissed && browserLang.indexOf('en') === 0) {
+        hint.style.display = 'block';
+        setTimeout(function() { hint.style.display = 'none'; }, 15000);
+    }
+})();
+    </script>
 </body>
+    <div class="lang-switch">
+<a href="https://tenlux.tech/" class="active">RU</a>
+<span>|</span>
+<a href="https://tenlux.tech/en/">EN</a>
+</div>
 </html>
