@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TenLux — обложка ВК</title>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body { background: #1a1a1a; color: #fff; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; margin: 0; min-height: 100vh; justify-content: center; }
+canvas { max-width: 100%; height: auto; border: 1px solid #333; border-radius: 8px; }
+button { margin-top: 20px; padding: 14px 32px; background: #fff; color: #000; border: none; border-radius: 8px; font-size: 1rem; font-weight: 500; cursor: pointer; }
+button:hover { background: #ccc; }
+p { color: #888; font-size: 0.9rem; margin-top: 12px; text-align: center; }
+</style>
+</head>
+<body>
+<canvas id="cover" width="1590" height="400"></canvas>
+<button id="download">Скачать PNG</button>
+<p>Размер: 1590×400 px — стандарт для обложки ВКонтакте</p>
+
+<script>
+document.fonts.ready.then(function() {
+    const canvas = document.getElementById('cover');
+    const ctx = canvas.getContext('2d');
+
+    ctx.fillStyle = '#0a0a0a';
+    ctx.fillRect(0, 0, 1590, 400);
+
+    ctx.fillStyle = '#ffffff';
+    ctx.font = '700 180px Tektur, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('TENLUX', 795, 195);
+
+    ctx.fillStyle = '#888888';
+    ctx.font = '400 30px Tektur, sans-serif';
+    ctx.fillText('DARK OUTSIDE. LIGHT INSIDE.', 795, 310);
+});
+
+document.getElementById('download').addEventListener('click', function() {
+    const canvas = document.getElementById('cover');
+    const link = document.createElement('a');
+    link.download = 'tenlux-cover.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+});
+</script>
+
+</body>
+</html>
