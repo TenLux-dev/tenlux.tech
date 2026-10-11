@@ -65,6 +65,9 @@ section p { color: #999; margin-bottom: 16px; }
 .contact-cta p { color: #888; margin-bottom: 16px; }
 footer { padding: 40px 0; border-top: 1px solid #1a1a1a; color: #444; font-size: 0.85rem; text-align: center; }
 footer .slogan { font-family: 'Tektur', sans-serif; font-weight: 400; letter-spacing: 0.1em; }
+    .social-links { margin-top: 20px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.social-links a { color: #555; transition: color 0.2s ease; display: inline-flex; align-items: center; justify-content: center; }
+.social-links a:hover { color: #fff; }
     .payment-info { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: center; align-items: center; font-size: 0.8rem; }
 .payment-label { font-family: 'Tektur', sans-serif; font-weight: 400; color: #666; letter-spacing: 0.05em; }
 .payment-method { color: #555; }
@@ -252,6 +255,7 @@ This site is available in English. <a href="https://tenlux.tech/en/">Switch to E
 <h2>Контакты</h2>
 <ul class="contact-list">
 <li><span class="label">Почта:</span><a href="mailto:hello@tenlux.tech">hello@tenlux.tech</a></li>
+ <li><span class="label">ВКонтакте:</span><a href="https://vk.com/tenlux.tech" target="_blank">vk.com/tenlux.tech</a></li>   
 <li><span class="label">Telegram:</span><a href="https://t.me/tenlux_dev">@tenlux_dev</a></li>
 <li><span class="label">GitHub:</span><a href="https://github.com/TenLux-dev">TenLux-dev</a></li>
 </ul>
@@ -262,6 +266,17 @@ This site is available in English. <a href="https://tenlux.tech/en/">Switch to E
 </section>
 <footer>
 <p class="slogan">Dark outside. Light inside.</p>
+    <div class="social-links">
+<a href="https://vk.com/tenlux.tech" target="_blank" aria-label="ВКонтакте">
+<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.785 16.241s.288-.032.436-.191c.136-.145.132-.42.132-.42s-.02-1.283.576-1.472c.588-.187 1.343 1.255 2.144 1.813.605.421 1.066.329 1.066.329l2.147-.03s1.123-.069.59-.953c-.044-.072-.31-.65-1.597-1.83-1.348-1.233-1.167-1.032.457-3.17.99-1.302 1.385-2.096 1.262-2.437-.118-.324-.845-.238-.845-.238l-2.416.015s-.179-.024-.312.055c-.13.077-.213.257-.213.257s-.384 1.021-.894 1.89c-1.079 1.828-1.51 1.925-1.686 1.81-.41-.265-.307-1.067-.307-1.635 0-1.782.268-2.525-.522-2.717-.262-.063-.455-.105-1.126-.112-.86-.008-1.588.003-2 .205-.274.134-.486.434-.357.451.16.021.522.098.714.36.247.338.238 1.099.238 1.099s.142 2.101-.265 2.361c-.259.166-.616-.173-1.381-1.724-.525-1.014-.92-2.134-.92-2.134s-.078-.191-.217-.293c-.169-.124-.405-.163-.405-.163l-2.295.015s-.345.01-.472.16c-.113.134-.009.41-.009.41s1.797 4.205 3.831 6.324c1.865 1.943 3.982 1.814 3.982 1.814h.96z"/></svg>
+</a>
+<a href="https://t.me/tenlux_dev" target="_blank" aria-label="Telegram">
+<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+</a>
+<a href="https://github.com/TenLux-dev" target="_blank" aria-label="GitHub">
+<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .3a12 12 0 00-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22l-.01 3.29c0 .31.22.7.83.57A12 12 0 0012 .3"/></svg>
+</a>
+</div>
 <div class="payment-info">
 <span class="payment-label">Оплата:</span>
 <span class="payment-method">Карты РФ</span>
