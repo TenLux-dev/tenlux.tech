@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://w3.org">
+
+  <!-- Главная страница (Русская версия) -->
   <url>
     <loc>https://tenlux.tech/</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tenlux.tech/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenlux.tech/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenlux.tech/"/>
   </url>
+
+  <!-- Английская версия главной страницы -->
+  <url>
+    <loc>https://tenlux.tech/en/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tenlux.tech/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tenlux.tech/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tenlux.tech/"/>
+  </url>
+
+  <!-- Страница Cover (если она индексируется и нужна в поиске) -->
+  <url>
+    <loc>https://tenlux.tech</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>
